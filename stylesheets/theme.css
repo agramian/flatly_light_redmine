@@ -4,28 +4,22 @@
 }
 
 .burger {
-  height: 30px;
-  width: 33px;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
-  margin-left: 20px;
-  padding-top: 10px;
+  padding-top: 11.11%;
   display: block;
   z-index: 101;
 }
 .burger .one,
 .burger .two,
 .burger .three {
-  margin-top: 3px;
   background: #258ecd;
-  width: 33px;
-  height: 4px;
-  position: absolute;
+  width: 70%;
+  margin-top: 11.11%;
+  margin-bottom: 11.11%;
+  margin-left: 15%;
+  height: 11.11%;
+  position: relative;
   border-radius: 2px;
 }
-.burger .two {
-  margin-top: 13px;
-}
-.burger .three {
-  margin-top: 23px;
-}
-

@@ -22,6 +22,8 @@ body {
   position: relative;
   left: 0;
   right: 0;
+  min-height: 480px;
+  min-width: 320px;
 }
 h1, h2, h3, h4 {
   font-family: 'Lato', Helvetika, Calibri, Arial, sans-serif;
@@ -36,23 +38,23 @@ h1:first-letter{
   background: #FFF;
   border-bottom: 4px solid #47a3da;
   color: #999;
-  width: 240px;
+  width: 33vh;
   height: 100%;
   top: 0;
   z-index: 100;
   position: fixed;
-  left: -240px;
+  left: -33vh;
   text-transform: uppercase;
   border-right: 2px solid #eeeff3;
   padding: 0;
   background-color: #354051;
   line-height: 40px;
+  min-height: 480px;
 }
 
 #top-menu a {
   color: #a0abbe;
   margin-right: 0px;
-  font-size: 16px;
 }
 
 #top-menu a:hover {
@@ -64,7 +66,6 @@ h1:first-letter{
   float: right;
   margin-right: 0.5em;
   color: #999;
-  font-size: 15px;
 }
 
 #top-menu ul li {
@@ -85,9 +86,8 @@ h1:first-letter{
 #menu{
   left: 0;
   top: 0px;
-  padding-top: 3px;
-  padding-right: 20px;
-  padding-bottom: 10px;
+  height: 10vh;
+  width: 10vh;
   position: fixed;
   border: 2px solid #eeeff3;
   border-top: none;
@@ -100,14 +100,14 @@ h1:first-letter{
 }
 
 .menu-push-toright{
-  left: 240px;
+  left: 33vh;
 }
 #menu.menu-push-toright{
-  left: 240px;
+  left: 33vh;
 }
 
 #quick-search.menu-push-toright{
-  left: 300px;
+  left: 43vh;
 }
 
 label[for="q"]{
@@ -134,17 +134,19 @@ label[for="q"]{
 
 #quick-search {
   position: fixed;
-  left: 60px;
+  left: 10vh;
   top: 0;
-  /*padding-top: 8px;*/
-  height: 53px;
-  margin-left: 15px;
+  height: 10vh;
+  width: -moz-calc(100% - 10vh);
+  width: -webkit-calc(100% - 10vh);
+  width: -o-calc(100% - 10vh);
+  width: calc(100% - 10vh);  
+  /*padding-left: 10vh;*/
   border: 3px;
   border: 2px solid #eeeff3;
   border-top: none;
   right: 0;
   border-right: 0;
-
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 101;
 }
@@ -152,22 +154,23 @@ label[for="q"]{
 #quick-search form {
   display: block;
   height: 100%;
-  margin-right: 310px;
+  width: 100%; 
+  position: relative;
+  /*margin-right: 10vh;*/
 }
 
 #quick-search input{
   padding: 0 20px !important;
   height: 100%  !important;
-  /*width: calc(100% - 2em);*/
   border: none;
   width: 100%;
   background: transparent;
   color: rgba(0,0,0,0.8);
-  font-size: 1em;
   line-height: 1;
   /*opacity: 0;*/
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.s;
+  position: relative;
 }
 
 #top-menu #loggedas{
@@ -328,3 +331,53 @@ select[onchange="if (this.value != '') { window.location = this.value; }"]{
   right: 10px;
 }
 
+/*=========== Responsive ======*/
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 20px;
+    }
+    #top-menu {
+        font-size: 20px;
+    }
+    input, textarea, keygen, select, button {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    body {
+        font-size: 24px;
+    }
+    #top-menu {
+        font-size: 24px;
+    }
+    input, textarea, keygen, select, button {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 28px;
+    }
+    #top-menu {
+        font-size: 28px;
+    }
+    input, textarea, keygen, select, button {
+        font-size: 28px;
+    }
+}
+
+/*
+@media screen and (min-height: 769px) and (max-width: 1280px) {
+    body {
+        font-size: 2vw;
+    }
+    #top-menu {
+        font-size: 2vw;
+    }
+    input, textarea, keygen, select, button {
+        font-size: 2vw;
+    }
+}
+*/
