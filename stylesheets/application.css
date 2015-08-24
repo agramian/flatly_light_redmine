@@ -346,47 +346,88 @@ select[onchange="if (this.value != '') { window.location = this.value; }"]{
 
 /*=========== Responsive ======*/
 @media screen and (max-width: 480px) {
-    body {
-        font-size: 20px;
-    }
-    #top-menu {
-        font-size: 20px;
-    }
-    .user {
-        font-size: 20px;
-    }
-    input, textarea, keygen, select, button {
+    body,
+    #top-menu,
+    .user,
+    .contextual,
+    input, textarea, keygen, select, button
+    {
         font-size: 20px;
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-    body {
-        font-size: 24px;
-    }
-    #top-menu {
-        font-size: 24px;
-    }
-    .user {
-        font-size: 24px;
-    }
-    input, textarea, keygen, select, button {
+    body,
+    #top-menu,
+    .user,
+    .contextual,
+    input, textarea, keygen, select, button
+    {
         font-size: 24px;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    body {
+    body,
+    #top-menu,
+    .user,
+    .contextual,
+    input, textarea, keygen, select, button
+    {
         font-size: 28px;
     }
-    #top-menu {
-        font-size: 28px;
+}
+
+@media screen and (max-width: 1024px) {
+    .splitcontentleft,
+    .splitcontentright,
+    #sidebar,
+    .tabular label,
+    .tabular p,
+    .contextual {
+        float: none;
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
     }
-    .user {
-        font-size: 28px;
+    #content {
+      width: 100%;
+      padding: 0;
+    }    
+    .box,
+    #sidebar,
+    .contextual {
+      width: 100%;
+      padding: 5px 10px;
+    } 
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4 {
+      padding: 20px;
     }
-    input, textarea, keygen, select, button {
-        font-size: 28px;
+    #main-menu {
+      position: relative;
+      left: 0;
+    }
+    #header {
+      padding-left: 20px;
+    }
+    #header h1,
+    #main-menu li a {
+      margin-left: 0;
+      left: 0;
+      padding: 0;
+    }
+    #main-menu li {
+      margin: 0;
+      width: 50%;
+    } 
+    #main.nosidebar #sidebar {
+      display: block;
+    }
+    #header {
+      top: 10vh;
     }
 }
 
