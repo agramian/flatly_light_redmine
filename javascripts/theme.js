@@ -74,8 +74,11 @@
     $( "#loggedas" ).prepend( "<div class='redmine-logo'></div>" );
     // body...
   }
-  $(document).ready(addLogo)
-
+  function injectViewportMetaTag() {
+    $('head').prepend('<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />');
+    $('head').prepend('<meta name="msapplication-tap-highlight" content="no" />');
+  };
+  $(document).ready(function() {addLogo();injectViewportMetaTag();})
   $(window).load(function() {
     $( "#quick-search form" ).css('margin-right', $( "#s2id_project_quick_jump_box" ).width() + 60);
     $( 'input[name$="q"]' ).attr( 'placeholder','Enter Search Text' );
