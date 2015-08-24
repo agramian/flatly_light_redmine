@@ -8,13 +8,21 @@
 @import url(forum.css);
 @import url(news.css);
 @import url(pagination.css);
-@import url(redminebacklogs.css);
 @import url(activity.css);
 
 html{
   overflow-x: hidden;
 }
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+@-ms-viewport{
+  width: device-width;
+}
 body {
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;
   font-family: 'Lato', Helvetika, Calibri, Arial, sans-serif;
   font-size: 100%;
   padding: 0 !important;
@@ -339,6 +347,9 @@ select[onchange="if (this.value != '') { window.location = this.value; }"]{
     #top-menu {
         font-size: 20px;
     }
+    .user {
+        font-size: 20px;
+    }
     input, textarea, keygen, select, button {
         font-size: 20px;
     }
@@ -351,6 +362,9 @@ select[onchange="if (this.value != '') { window.location = this.value; }"]{
     #top-menu {
         font-size: 24px;
     }
+    .user {
+        font-size: 24px;
+    }
     input, textarea, keygen, select, button {
         font-size: 24px;
     }
@@ -361,6 +375,9 @@ select[onchange="if (this.value != '') { window.location = this.value; }"]{
         font-size: 28px;
     }
     #top-menu {
+        font-size: 28px;
+    }
+    .user {
         font-size: 28px;
     }
     input, textarea, keygen, select, button {
